@@ -11,27 +11,16 @@ import UIKit
 class ComposerListVC: UIViewController {
     
     private (set) public var genreSelected = ""
+    
      var listOfComposers = [Composers]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       let composersRequest =  ComposerRequest.init(genre: genreSelected)
-       
-        
-        composersRequest.getComposers {
-            composer in switch composer {
-            case .success(let composers):
-            
-                self.listOfComposers = composers
-                print(self.listOfComposers)
-            case.failure(let error):
-                print(error)
-            }
-        }
-        
-        printComposers()
+     
+        getComposers()
+      
     
     
 }
@@ -40,7 +29,21 @@ class ComposerListVC: UIViewController {
           genreSelected = genre.title
       }
     
-    func printComposers(){
+    
+    
+    func getComposers(){
+        let composersRequest =  ComposerRequest.init(genre: genreSelected)
+             
+              composersRequest.getComposers {
+                  composer in switch composer {
+                  case .success(let composers):
+                      self.listOfComposers = composers
+                      print(self.listOfComposers)
+                  case.failure(let error):
+                      print(error)
+                  }
+              }
+              
     
     }
     

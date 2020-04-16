@@ -22,8 +22,7 @@ struct ComposerRequest {
         
       let resourceString = "https://api.openopus.org/composer/list/epoch/\(genre).json"
         
-       // let resourceString = "https://api.openopus.org/composer/list/epoch/Medieval.json"
-        
+      
         guard let resourceURL = URL(string: resourceString) else {fatalError()}
         self.resourceUrl = resourceURL
         
@@ -31,22 +30,20 @@ struct ComposerRequest {
     
     
      func getComposers(completion: @escaping(Result<[Composers], ComposerError>) -> Void){
-  //  func getComposers(completion: @escaping(Result<[ComposersDetails], ComposerError>) -> Void){
-        
+
         let dataTask = URLSession.shared.dataTask(with: resourceUrl) { (dataReturned, _, _) in
             
            
             guard let dataSuccessfullyReturned = dataReturned else{completion(.failure(.noDataAvailable))
                          return}
-            print("1")
+
             
-            
-            
+                //Where the JSON parsing & deCoding gets executed
+                
+                //SUCCESFUL Case
                         do {
             
-                            print("2")
                             let composersResponseSuccess = try JSONDecoder().decode(ResponseBody.self, from: dataSuccessfullyReturned)
-                           print("3")
                             let composersDetails = composersResponseSuccess.composers
                             completion(.success(composersDetails))
                             print("success")
@@ -54,33 +51,6 @@ struct ComposerRequest {
                             completion(.failure(.cantProcessData))
                             print(error)
                         }
-                        
-            
-            
-            
-            
-            
-            
-        
-        
-            //Where the JSON parsing & deCoding gets executed
-            
-            //SUCCESFUL Case
-            
-//            do {
-//
-//                print("2")
-//                let composersResponseSuccess = try JSONDecoder().decode(ComposerResponse.self, from: dataSuccessfullyReturned)
-//                 print("3")
-//                let composersDetails = composersResponseSuccess.response.composers
-//                 print("4")
-//                completion(.success(composersDetails))
-//                print("success")
-//            } catch let error{
-//                completion(.failure(.cantProcessData))
-//                print(error)
-//            }
-            
            
         }
         dataTask.resume()

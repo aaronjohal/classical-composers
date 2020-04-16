@@ -34,8 +34,8 @@ import Foundation
 
 
 struct ResponseBody: Decodable {
-//    var status: Status
-//    var request: Request
+    //    var status: Status
+    //    var request: Request
     var composers: [Composers]
 }
 
@@ -45,24 +45,11 @@ struct Status: Decodable {
 struct Request: Decodable {
 }
 
-
 struct Composers: Decodable {
     var name: String
+    
+    enum CodingKeys : String, CodingKey {
+        case name = "complete_name"
+    }
 }
-
-
-
-
-//struct ComposerResponse: Decodable {
-//    var response: Composers
-//}
-
-//struct Composers: Decodable {
-//    var composers: [ComposersDetails]
-//}
-
-//struct ComposersDetails: Decodable {
-//    var id: String
-//    let name: String
-//}
 
