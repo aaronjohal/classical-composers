@@ -8,6 +8,7 @@
 
 import Foundation
 
+//https://api.openopus.org/composer/list/epoch/Medieval.json
 
 //"status": {
 //       "version": "1.20",
@@ -18,10 +19,18 @@ import Foundation
 //       "api": "Open Opus-cache"
 //   },
 //   "request": {
-//       "type": "epoch",
-//       "item": "Medieval"
-//   },
-//   "composers": [
+////       "type": "epoch",
+////       "item": "Medieval"
+////   },
+////   "composers": ["composers": [
+//{
+//    "id": "82",
+//    "name": "Dufay",
+//    "complete_name": "Guillaume Dufay",
+//    "birth": "1400-01-01",
+//    "death": "1474-01-01",
+//    "epoch": "Medieval",
+//    "portrait": "https://assets.openopus.org/portraits/40935386-1568084886.jpg"
 
 struct ComposerResponse: Decodable {
     var response: Composers
@@ -32,7 +41,7 @@ struct Composers: Decodable {
 }
 
 struct ComposersDetails: Decodable {
-    let id:String
+    let id: String
     var name: String
 
     
