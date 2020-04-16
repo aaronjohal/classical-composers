@@ -17,11 +17,6 @@ class ComposerListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-     
-        getComposers()
-      
-    
     
 }
     
@@ -30,15 +25,13 @@ class ComposerListVC: UIViewController {
       }
     
     
-    
     func getComposers(){
         let composersRequest =  ComposerRequest.init(genre: genreSelected)
              
               composersRequest.getComposers {
-                  composer in switch composer {
+                   composer in switch composer {
                   case .success(let composers):
                       self.listOfComposers = composers
-                      print(self.listOfComposers)
                   case.failure(let error):
                       print(error)
                   }

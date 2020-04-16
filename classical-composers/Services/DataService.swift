@@ -30,7 +30,6 @@ class DataService {
         return genres
     }
     
-  
     
     }
 

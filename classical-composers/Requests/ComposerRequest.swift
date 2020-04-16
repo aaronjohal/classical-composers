@@ -37,7 +37,6 @@ struct ComposerRequest {
             guard let dataSuccessfullyReturned = dataReturned else{completion(.failure(.noDataAvailable))
                          return}
 
-            
                 //Where the JSON parsing & deCoding gets executed
                 
                 //SUCCESFUL Case
