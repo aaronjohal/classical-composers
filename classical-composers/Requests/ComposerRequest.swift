@@ -14,45 +14,65 @@ enum ComposerError: Error {
     
 }
 
-struct ComposerRequest {
+
+class ComposerRequest {
    
     let resourceUrl: URL
+    var array = [Composers]()
    
     init(genre: String){
         
-      let resourceString = "https://api.openopus.org/composer/list/epoch/\(genre).json"
+    
+        let resourceString = "https://api.openopus.org/composer/list/epoch/\(genre).json"
         
-      
-        guard let resourceURL = URL(string: resourceString) else {fatalError()}
+        let urlString = resourceString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! //allows empty spaces for adding the %20
+        
+        guard let resourceURL = URL(string: urlString) else {fatalError()}
+        
         self.resourceUrl = resourceURL
-        
+    
     }
     
     
-     func getComposers(completion: @escaping(Result<[Composers], ComposerError>) -> Void){
+    
+    func getComposers(completion: @escaping(Result<[Composers], ComposerError>) -> Void){
 
         let dataTask = URLSession.shared.dataTask(with: resourceUrl) { (dataReturned, _, _) in
-            
-           
-            guard let dataSuccessfullyReturned = dataReturned else{completion(.failure(.noDataAvailable))
-                         return}
 
-                //Where the JSON parsing & deCoding gets executed
-                
-                //SUCCESFUL Case
-                        do {
-            
-                            let composersResponseSuccess = try JSONDecoder().decode(ResponseBody.self, from: dataSuccessfullyReturned)
-                            let composersDetails = composersResponseSuccess.composers
-                            completion(.success(composersDetails))
-                            print("success")
-                        } catch let error{
-                            completion(.failure(.cantProcessData))
-                            print(error)
-                        }
-           
+
+            guard let dataSuccessfullyReturned = dataReturned else{completion(.failure(.noDataAvailable))
+                return}
+
+            //Where the JSON parsing & deCoding gets executed
+
+            //SUCCESFUL Case
+            do {
+
+                let composersResponseSuccess = try JSONDecoder().decode(ResponseBody.self, from: dataSuccessfullyReturned)
+
+                DispatchQueue.main.async {
+
+                    let composersDetails = composersResponseSuccess.composers
+                    completion(.success(composersDetails))
+                   print(composersDetails)
+                   
+                }
+
+            } catch let error{
+                completion(.failure(.cantProcessData))
+                print(error)
+            }
+
         }
         dataTask.resume()
-        
+
+
     }
-}
+    
+
+    
+    
+ }
+
+
+

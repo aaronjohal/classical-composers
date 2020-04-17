@@ -15,12 +15,14 @@ struct ResponseBody: Decodable {
     var composers: [Composers]
 }
 
-
 struct Composers: Decodable {
     var name: String
+    var imageURL: String
     
     enum CodingKeys : String, CodingKey {
-        case name = "complete_name"
+        case name = "name"
+        case imageURL = "portrait"
     }
 }
+
 

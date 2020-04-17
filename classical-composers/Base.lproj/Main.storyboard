@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,14 +81,74 @@
                     <view key="view" contentMode="scaleToFill" id="xXL-kc-FNK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kHJ-AE-Fkx">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g0q-Dp-oUP">
+                                    <size key="itemSize" width="171" height="191"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArtistCell" id="DtP-uh-gUy" customClass="ArtistCell" customModule="classical_composers" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="191"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fkx-8U-5Na">
+                                            <rect key="frame" x="0.0" y="0.0" width="171" height="191"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQW-Y6-mCM">
+                                                    <rect key="frame" x="3" y="157" width="165" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="Gh4-mq-ZzY"/>
+                                                        <constraint firstAttribute="height" constant="26" id="SJf-9i-Ryy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tkh-Kx-GOR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="171" height="159"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="iQW-Y6-mCM" secondAttribute="bottom" constant="8" id="3Se-HY-s7z"/>
+                                                <constraint firstItem="iQW-Y6-mCM" firstAttribute="centerX" secondItem="fkx-8U-5Na" secondAttribute="centerX" id="9RS-Gu-w4d"/>
+                                                <constraint firstAttribute="bottom" secondItem="Tkh-Kx-GOR" secondAttribute="bottom" constant="32" id="F1E-zs-5ca"/>
+                                                <constraint firstItem="Tkh-Kx-GOR" firstAttribute="leading" secondItem="fkx-8U-5Na" secondAttribute="leading" id="GUI-cf-BNx"/>
+                                                <constraint firstItem="Tkh-Kx-GOR" firstAttribute="top" secondItem="fkx-8U-5Na" secondAttribute="top" id="ION-HS-91d"/>
+                                                <constraint firstAttribute="trailing" secondItem="Tkh-Kx-GOR" secondAttribute="trailing" id="x8B-kZ-K40"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="customSize" width="171" height="191"/>
+                                        <connections>
+                                            <outlet property="aristName" destination="iQW-Y6-mCM" id="W0m-2S-UrY"/>
+                                            <outlet property="imageView" destination="Tkh-Kx-GOR" id="0pB-hZ-hgM"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kHJ-AE-Fkx" secondAttribute="trailing" id="6GN-xr-xin"/>
+                            <constraint firstItem="kHJ-AE-Fkx" firstAttribute="bottom" secondItem="85c-0Z-Aks" secondAttribute="bottom" id="SUf-j1-Ce5"/>
+                            <constraint firstItem="kHJ-AE-Fkx" firstAttribute="top" secondItem="85c-0Z-Aks" secondAttribute="top" id="YtE-ZP-gk0"/>
+                            <constraint firstItem="kHJ-AE-Fkx" firstAttribute="leading" secondItem="85c-0Z-Aks" secondAttribute="leading" id="spc-Jd-eha"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="85c-0Z-Aks"/>
                     </view>
                     <navigationItem key="navigationItem" id="qXG-gi-WJw"/>
+                    <connections>
+                        <outlet property="artistCollectionView" destination="kHJ-AE-Fkx" id="6mJ-rs-B7H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2q-o3-ulv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1916" y="90"/>
+            <point key="canvasLocation" x="1916" y="89.505247376311857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gV5-Mo-SQO">
