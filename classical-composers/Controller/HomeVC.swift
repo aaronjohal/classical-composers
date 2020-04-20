@@ -12,16 +12,14 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
 
     @IBOutlet weak var genreTable: UITableView!
-    
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
         genreTable.delegate = self
         genreTable.dataSource = self
         genreTable.rowHeight = 100
-       
-      
+    
         
     }
     
@@ -35,7 +33,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if let cell = genreTable.dequeueReusableCell(withIdentifier: "GenreCell", for: indexPath) as? GenreCell { //identifying the view of the row
             let genre =  DataService.instance.getGenres()[indexPath.row] //get content
             cell.updateViews(title: genre.title)
-            
             return cell
             
         } else {
@@ -66,4 +63,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 
 }
+
+
 

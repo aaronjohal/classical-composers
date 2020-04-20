@@ -18,7 +18,6 @@ enum ComposerError: Error {
 class ComposerRequest {
    
     let resourceUrl: URL
-    var array = [Composers]()
    
     init(genre: String){
         
@@ -32,7 +31,6 @@ class ComposerRequest {
         self.resourceUrl = resourceURL
     
     }
-    
     
     
     func getComposers(completion: @escaping(Result<[Composers], ComposerError>) -> Void){

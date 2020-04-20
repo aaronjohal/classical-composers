@@ -14,12 +14,13 @@ class ArtistCell: UICollectionViewCell {
     @IBOutlet weak var aristName: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    func updateView(name: String?, image: UIImage? ){
-         aristName.text = name
-         imageView.image = image
-       
-       
+    
+    func updateView(name: String, imageURL: String ){
+        aristName.text = name
+        imageView.loadImageUsingURL(urlString: imageURL)
+        
+        
     }
     
-
+    
 }
