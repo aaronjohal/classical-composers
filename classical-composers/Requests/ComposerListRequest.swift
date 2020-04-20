@@ -15,7 +15,7 @@ enum ComposerError: Error {
 }
 
 
-class ComposerRequest {
+class ComposerListRequest {
    
     let resourceUrl: URL
    

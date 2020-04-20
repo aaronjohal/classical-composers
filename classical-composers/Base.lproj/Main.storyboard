@@ -143,12 +143,29 @@
                     </view>
                     <navigationItem key="navigationItem" id="qXG-gi-WJw"/>
                     <connections>
-                        <outlet property="artistCollectionView" destination="kHJ-AE-Fkx" id="6mJ-rs-B7H"/>
+                        <outlet property="collectionView" destination="kHJ-AE-Fkx" id="6mJ-rs-B7H"/>
+                        <segue destination="LGR-ad-i2I" kind="show" identifier="ComposerWorksVC" id="wNV-iu-2Hg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2q-o3-ulv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1916" y="89.505247376311857"/>
+        </scene>
+        <!--Composer WorksVC-->
+        <scene sceneID="Hgs-2X-nTb">
+            <objects>
+                <viewController id="LGR-ad-i2I" customClass="ComposerWorksVC" customModule="classical_composers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D0e-q8-E0X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="qTr-4q-3BG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sTY-oM-omc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9R-gz-PxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2686" y="90"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gV5-Mo-SQO">

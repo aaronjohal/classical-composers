@@ -13,6 +13,7 @@ class ArtistCell: UICollectionViewCell {
     
     @IBOutlet weak var aristName: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+   
     
     
     func updateView(name: String, imageURL: String ){

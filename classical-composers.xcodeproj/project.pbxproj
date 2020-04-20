@@ -18,8 +18,9 @@
 		B45C2ED5244860F600E2D55E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C2ED4244860F600E2D55E /* HomeVC.swift */; };
 		B45C2ED72448617100E2D55E /* ComposerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C2ED62448617100E2D55E /* ComposerListVC.swift */; };
 		B45C2ED9244866A000E2D55E /* Composers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C2ED8244866A000E2D55E /* Composers.swift */; };
-		B45C2EDC2448684C00E2D55E /* ComposerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C2EDB2448684C00E2D55E /* ComposerRequest.swift */; };
+		B45C2EDC2448684C00E2D55E /* ComposerListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C2EDB2448684C00E2D55E /* ComposerListRequest.swift */; };
 		B45C2EE22449D8C600E2D55E /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C2EE12449D8C600E2D55E /* ArtistCell.swift */; };
+		B49A44E0244DE7C200D1FFD5 /* ComposerWorksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A44DF244DE7C200D1FFD5 /* ComposerWorksVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +37,9 @@
 		B45C2ED4244860F600E2D55E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		B45C2ED62448617100E2D55E /* ComposerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerListVC.swift; sourceTree = "<group>"; };
 		B45C2ED8244866A000E2D55E /* Composers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composers.swift; sourceTree = "<group>"; };
-		B45C2EDB2448684C00E2D55E /* ComposerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerRequest.swift; sourceTree = "<group>"; };
+		B45C2EDB2448684C00E2D55E /* ComposerListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerListRequest.swift; sourceTree = "<group>"; };
 		B45C2EE12449D8C600E2D55E /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
+		B49A44DF244DE7C200D1FFD5 /* ComposerWorksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerWorksVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				B45C2ED4244860F600E2D55E /* HomeVC.swift */,
 				B45C2ED62448617100E2D55E /* ComposerListVC.swift */,
+				B49A44DF244DE7C200D1FFD5 /* ComposerWorksVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -123,7 +126,7 @@
 		B45C2EDA2448683C00E2D55E /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				B45C2EDB2448684C00E2D55E /* ComposerRequest.swift */,
+				B45C2EDB2448684C00E2D55E /* ComposerListRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -203,7 +206,8 @@
 				B45C2ED9244866A000E2D55E /* Composers.swift in Sources */,
 				B45C2EB72448514F00E2D55E /* AppDelegate.swift in Sources */,
 				B45C2EB92448514F00E2D55E /* SceneDelegate.swift in Sources */,
-				B45C2EDC2448684C00E2D55E /* ComposerRequest.swift in Sources */,
+				B45C2EDC2448684C00E2D55E /* ComposerListRequest.swift in Sources */,
+				B49A44E0244DE7C200D1FFD5 /* ComposerWorksVC.swift in Sources */,
 				B45C2ECE2448536A00E2D55E /* Genre.swift in Sources */,
 				B45C2ED72448617100E2D55E /* ComposerListVC.swift in Sources */,
 				B45C2ED12448558B00E2D55E /* DataService.swift in Sources */,
