@@ -21,6 +21,10 @@
 		B45C2EDC2448684C00E2D55E /* ComposerListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C2EDB2448684C00E2D55E /* ComposerListRequest.swift */; };
 		B45C2EE22449D8C600E2D55E /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45C2EE12449D8C600E2D55E /* ArtistCell.swift */; };
 		B49A44E0244DE7C200D1FFD5 /* ComposerWorksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A44DF244DE7C200D1FFD5 /* ComposerWorksVC.swift */; };
+		B49A44E5244EE05D00D1FFD5 /* PopularWorksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A44E4244EE05D00D1FFD5 /* PopularWorksRequest.swift */; };
+		B49A44E9244F17FD00D1FFD5 /* ArtistImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A44E8244F17FD00D1FFD5 /* ArtistImage.swift */; };
+		B4E133A1244F3A30006F4CC1 /* artistDateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E133A0244F3A30006F4CC1 /* artistDateLabel.swift */; };
+		B4E133A3244F3F93006F4CC1 /* WorksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E133A2244F3F93006F4CC1 /* WorksCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		B45C2EDB2448684C00E2D55E /* ComposerListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerListRequest.swift; sourceTree = "<group>"; };
 		B45C2EE12449D8C600E2D55E /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		B49A44DF244DE7C200D1FFD5 /* ComposerWorksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerWorksVC.swift; sourceTree = "<group>"; };
+		B49A44E4244EE05D00D1FFD5 /* PopularWorksRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularWorksRequest.swift; sourceTree = "<group>"; };
+		B49A44E8244F17FD00D1FFD5 /* ArtistImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistImage.swift; sourceTree = "<group>"; };
+		B4E133A0244F3A30006F4CC1 /* artistDateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = artistDateLabel.swift; sourceTree = "<group>"; };
+		B4E133A2244F3F93006F4CC1 /* WorksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,9 @@
 			children = (
 				B45C2ED224485C3D00E2D55E /* GenreCell.swift */,
 				B45C2EE12449D8C600E2D55E /* ArtistCell.swift */,
+				B49A44E8244F17FD00D1FFD5 /* ArtistImage.swift */,
+				B4E133A0244F3A30006F4CC1 /* artistDateLabel.swift */,
+				B4E133A2244F3F93006F4CC1 /* WorksCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B45C2EDB2448684C00E2D55E /* ComposerListRequest.swift */,
+				B49A44E4244EE05D00D1FFD5 /* PopularWorksRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -205,10 +217,14 @@
 				B45C2ED5244860F600E2D55E /* HomeVC.swift in Sources */,
 				B45C2ED9244866A000E2D55E /* Composers.swift in Sources */,
 				B45C2EB72448514F00E2D55E /* AppDelegate.swift in Sources */,
+				B4E133A1244F3A30006F4CC1 /* artistDateLabel.swift in Sources */,
 				B45C2EB92448514F00E2D55E /* SceneDelegate.swift in Sources */,
 				B45C2EDC2448684C00E2D55E /* ComposerListRequest.swift in Sources */,
+				B49A44E9244F17FD00D1FFD5 /* ArtistImage.swift in Sources */,
 				B49A44E0244DE7C200D1FFD5 /* ComposerWorksVC.swift in Sources */,
+				B49A44E5244EE05D00D1FFD5 /* PopularWorksRequest.swift in Sources */,
 				B45C2ECE2448536A00E2D55E /* Genre.swift in Sources */,
+				B4E133A3244F3F93006F4CC1 /* WorksCell.swift in Sources */,
 				B45C2ED72448617100E2D55E /* ComposerListVC.swift in Sources */,
 				B45C2ED12448558B00E2D55E /* DataService.swift in Sources */,
 				B45C2EE22449D8C600E2D55E /* ArtistCell.swift in Sources */,

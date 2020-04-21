@@ -8,11 +8,18 @@
 
 import Foundation
 
-//https://api.openopus.org/composer/list/epoch/Medieval.json
+
+
+//https://api.openopus.org/composer/list/epoch/Medieval.json genre endpoint
+//https://api.openopus.org/work/list/composer/196/genre/Popular.json composer works endpoint
 
 
 struct ResponseBody: Decodable {
-    var composers: [Composers]
+    var status: Status //status of request
+    var composers: [Composers]? //list of composers
+    var composer: Composers? //single composer
+    var works: [Works]?
+    
 }
 
 struct Composers: Decodable {
@@ -21,6 +28,10 @@ struct Composers: Decodable {
     var completeName: String?
     var imageURL: String
     var genre: String
+    var birth: String
+    var death: String
+    
+  
     
     enum CodingKeys : String, CodingKey {
         case id = "id"
@@ -28,20 +39,25 @@ struct Composers: Decodable {
         case completeName = "complete_name"
         case imageURL = "portrait"
         case genre = "epoch"
+        case birth = "birth"
+        case death = "death"
         
     }
     
 
 }
 
-//
-////      "epoch": "Romantic",
-//    "birth": "1810-01-01",
-//    "death": "1856-01-01",
-//    "complete_name": "Robert Schumann",
-//    "portrait": "https://assets.openopus.org/portraits/25233320-1568084946.jpg"
-//},
 
+
+struct Works: Decodable {
+    var title: String
+}
+
+
+struct Status: Decodable {
+    var error: String?
+    
+}
 
 
 

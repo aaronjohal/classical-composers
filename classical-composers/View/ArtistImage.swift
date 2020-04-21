@@ -8,6 +8,19 @@
 
 import UIKit
 
-class ArtistImage: UIImage {
+class ArtistImage: UIImageView {
+    
+    func updateView(imageURL: String){
+    self.loadImageUsingURL(urlString: imageURL)
+        makeRounded()
+
+    }
+    
+    func makeRounded() {
+        self.contentMode = UIView.ContentMode.scaleAspectFill
+        self.layer.cornerRadius = self.frame.height / 2
+        self.layer.masksToBounds = false
+        self.clipsToBounds = true
+      }
 
 }

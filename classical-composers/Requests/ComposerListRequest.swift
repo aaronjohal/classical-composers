@@ -47,14 +47,13 @@ class ComposerListRequest {
             do {
 
                 let composersResponseSuccess = try JSONDecoder().decode(ResponseBody.self, from: dataSuccessfullyReturned)
-
-                DispatchQueue.main.async {
+               print(composersResponseSuccess)
 
                     let composersDetails = composersResponseSuccess.composers
-                    completion(.success(composersDetails))
-                   print(composersDetails)
+                    completion(.success(composersDetails!))
+                  
                    
-                }
+                
 
             } catch let error{
                 completion(.failure(.cantProcessData))

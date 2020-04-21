@@ -8,14 +8,15 @@
 
 import UIKit
 
-class WorksCell: UILabel {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+class WorksCell: UITableViewCell {
+    
+    @IBOutlet weak var workTitle: UILabel!
+    
+    func updateViews(title: String){
+        
+        self.workTitle.text = title
+        
+        
     }
-    */
 
 }

@@ -104,8 +104,8 @@ class ComposerListVC: UIViewController, UICollectionViewDelegate, UICollectionVi
 }
 
 
-let imageCache = NSCache<NSString, UIImage>()
 
+let imageCache = NSCache<NSString, UIImage>()
 
 /** Extension class for UIIMageView to load an image from an URL*/
 
