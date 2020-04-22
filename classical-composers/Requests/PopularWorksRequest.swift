@@ -22,7 +22,7 @@ class PopularWorksRequest {
     
     init(composerID: String){
         
-        let urlString = "https://api.openopus.org/work/list/composer/\(composerID)/genre/Recommended.json"
+        let urlString = "https://api.openopus.org/work/list/composer/\(composerID)/genre/all.json"
         guard let resourceURL = URL (string: urlString) else {fatalError()}
         self.resourceURL = resourceURL
         
